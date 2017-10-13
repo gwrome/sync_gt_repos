@@ -20,6 +20,9 @@ from os import path, chdir, makedirs
 from datetime import datetime
 from subprocess import Popen, PIPE
 
+#change this to your username
+USER_NAME = ''
+
 # access token stored in file in home directory called .gt_git_credentials
 CREDENTIALS_FILE = path.expanduser("~") +"/.gt_git_credentials"
 SRC_DIR = path.expanduser("~/src/gt-github")
@@ -30,7 +33,7 @@ with open(CREDENTIALS_FILE, 'r') as fd:
 error_log = open(ERROR_LOG, 'a+')
 
 gt_gh = GitHubEnterprise('https://github.gatech.edu')
-gt_gh.login('grome3', token=token)
+gt_gh.login(USER_NAME, token=token)
 repos = gt_gh.repositories()
 chdir(SRC_DIR)
 
