@@ -5,6 +5,7 @@ Script to automatically sync all a user's github repositories to a local machine
 Setup
 -----
 * Clone the repo to your local machine
+* Update USER_NAME variable to your GT username
 * Install github3.py library (pip install -r requirements.txt)
 * Create a personal access token in GitHub's [Settings | Personal Access Tokens](https://github.gatech.edu/settings/tokens) menu
 * Copy the token to your computer (by default in ~/.gt_git_credentials)
